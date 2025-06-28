@@ -1,17 +1,19 @@
-def get_book_text(file_path):
+# def get_book_text(file_path):
+#     with open(file_path) as f:
+#         file_contents = f.read()
+#     return file_contents
+
+def word_analysis(file_path):
     with open(file_path) as f:
         file_contents = f.read()
-    return file_contents
-
-def word_analysis(file_contents):
-    file_contents = "books/frankenstein.txt".split()
+    words = file_contents.split()
     count = 0
-    for char in file_contents:
+    for word in words:
         count += 1
-    print(f"{count} words found in the document.")
+    return count
 
 def main():
-    print(get_book_text("books/frankenstein.txt"))
+    num_words = word_analysis("books/frankenstein.txt")
+    print(f"{num_words} words found in the document")
 
-word_analysis("books/frankenstein.txt")
-
+main()
