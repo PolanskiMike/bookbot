@@ -15,5 +15,10 @@ def char_analysis(file_path):
         if char not in char_dict:
             char_dict[char] = 1
         else:
-            char_dict[char] += 1 
+            char_dict[char] += 1
+    char_dict.sort(reverse=True, key=char)
     return char_dict
+
+# def report (data):
+#     dictionary_list = []
+#     for info in data:
